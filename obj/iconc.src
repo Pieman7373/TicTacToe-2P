@@ -1,0 +1,30 @@
+ define .icon,space=ram
+ segment .icon
+ .def __program_icon
+ .def __program_description
+
+ .assume adl=1
+
+ jp 0D1A996h
+ db 1
+__program_icon:
+ db 16,16
+ db 0FFh,0FFh,0FFh,0FFh,0FFh,0FFh,0FFh,0FFh,0FFh,0FFh,0FFh,0FFh,0FFh,0FFh,0FFh,0FFh
+ db 0FFh,0E0h,0FFh,0FFh,0E0h,000h,0FFh,0FFh,0FFh,0FFh,000h,0FFh,019h,019h,0FFh,0FFh
+ db 0FFh,0FFh,0E0h,0E0h,0FFh,000h,0FFh,0FFh,0FFh,0FFh,000h,019h,0FFh,0FFh,019h,0FFh
+ db 0FFh,0FFh,0E0h,0E0h,0FFh,000h,0FFh,0FFh,0FFh,0FFh,000h,019h,0FFh,0FFh,019h,0FFh
+ db 0FFh,0E0h,0FFh,0FFh,0E0h,000h,0FFh,0FFh,0FFh,0FFh,000h,0FFh,019h,019h,0FFh,0FFh
+ db 0FFh,000h,000h,000h,000h,000h,000h,000h,000h,000h,000h,000h,000h,000h,000h,0FFh
+ db 0FFh,0FFh,0FFh,0FFh,0FFh,000h,0FFh,019h,019h,0FFh,000h,0E0h,0FFh,0FFh,0E0h,0FFh
+ db 0FFh,0FFh,0FFh,0FFh,0FFh,000h,019h,0FFh,0FFh,019h,000h,0FFh,0E0h,0E0h,0FFh,0FFh
+ db 0FFh,0FFh,0FFh,0FFh,0FFh,000h,019h,0FFh,0FFh,019h,000h,0FFh,0E0h,0E0h,0FFh,0FFh
+ db 0FFh,0FFh,0FFh,0FFh,0FFh,000h,0FFh,019h,019h,0FFh,000h,0E0h,0FFh,0FFh,0E0h,0FFh
+ db 0FFh,000h,000h,000h,000h,000h,000h,000h,000h,000h,000h,000h,000h,000h,000h,0FFh
+ db 0FFh,0FFh,0FFh,0FFh,0FFh,000h,0E0h,0FFh,0FFh,0E0h,000h,0FFh,019h,019h,0FFh,0FFh
+ db 0FFh,0FFh,0FFh,0FFh,0FFh,000h,0FFh,0E0h,0E0h,0FFh,000h,019h,0FFh,0FFh,019h,0FFh
+ db 0FFh,0FFh,0FFh,0FFh,0FFh,000h,0FFh,0E0h,0E0h,0FFh,000h,019h,0FFh,0FFh,019h,0FFh
+ db 0FFh,0FFh,0FFh,0FFh,0FFh,000h,0E0h,0FFh,0FFh,0E0h,000h,0FFh,019h,019h,0FFh,0FFh
+ db 0FFh,0FFh,0FFh,0FFh,0FFh,0FFh,0FFh,0FFh,0FFh,0FFh,0FFh,0FFh,0FFh,0FFh,0FFh,0FFh
+
+__program_description:
+ db "TicTacToe 2P",0

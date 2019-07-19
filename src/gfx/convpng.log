@@ -1,0 +1,26 @@
+Opened convpng.ini
+
+--- Group tictacgfx (C) ---
+Using built-in xlibc palette ...
+warning: might ignore transparent color value for a fixed palette.
+Transparent Color Index : 0
+Transparent Color : 0xFFFF
+10:
+ fancyredx : converted!
+ fancyblueo : converted!
+ redcursor : converted!
+ bluecursor : converted!
+ blue_firework_1_16x16 : converted!
+ blue_firework_2_16x16 : converted!
+ blue_swirl : converted!
+ red_firework_1_16x16 : converted!
+ red_firework_2_16x16 : converted!
+ red_swirl : converted!
+
+Converted in 0 s
+
+[warning] image quality might be too low.
+please try grouping similar images, reducing image colors, 
+or selecting a better palette if conversion is not ideal.
+
+Finished!

@@ -1,0 +1,544 @@
+
+IEEE 695 OMF Linker Version 6.25 (11121301)
+Copyright (C) 1999-2008 Zilog, Inc. All Rights Reserved
+
+LINK MAP:
+
+DATE:      Sun Mar 31 12:05:38 2019
+PROCESSOR: assembler
+FILES:     obj\main.obj           
+           obj\blue_firework_1_16x16.obj
+           obj\blue_firework_2_16x16.obj
+           obj\blue_swirl.obj
+           obj\bluecursor.obj
+           obj\fancyblueo.obj
+           obj\fancyredx.obj
+           obj\red_firework_1_16x16.obj
+           obj\red_firework_2_16x16.obj
+           obj\red_swirl.obj
+           obj\redcursor.obj
+           obj\tictacgfx.obj
+           obj\iconc.obj          
+           C:\Users\Pieman773\Desktop\CECdev\lib\ccleanup.obj
+           C:\Users\Pieman773\Desktop\CECdev\lib\cce.lib
+           C:\Users\Pieman773\Desktop\CECdev\lib\cshared.lib
+           C:\Users\Pieman773\Desktop\CECdev\lib\clinked.lib
+           C:\Users\Pieman773\Desktop\CECdev\lib\graphx.lib
+           C:\Users\Pieman773\Desktop\CECdev\lib\keypadc.lib
+           C:\Users\Pieman773\Desktop\CECdev\lib\graphx_header.obj
+           C:\Users\Pieman773\Desktop\CECdev\lib\keypadc_header.obj
+           C:\Users\Pieman773\Desktop\CECdev\lib\libheader.obj
+           C:\Users\Pieman773\Desktop\CECdev\lib\cstartup.obj
+           
+
+
+COMMAND LIST:
+=============
+-FORMAT=INTEL32 -map -maxhexlen=64 -quiet -warnoverlap -xref -unresolved=fatal -sort ADDRESS=ascending -warn -NOdebug -NOigcase define __copy_code_to_ram = 0 range rom $000000 : $3FFFFF range ram $D00000 : $FFFFFF range bss $D031F6 : $D13FD6 change code is ram change data is ram change text is ram change strsect is text define __low_bss = base of bss define __len_bss = length of bss define __heaptop = (highaddr of bss) define __heapbot = (top of bss)+1 define __stack = $D1A87E locate .header at $D1A87F locate .icon at (top of .header)+1 locate .launcher at (top of .icon)+1 locate .libs at (top of .launcher)+1 locate .graphx_header at (top of .libs)+1 locate .graphx at (top of .graphx_header)+1 locate .keypadc_header at (top of .graphx+1) locate .keypadc at (top of .keypadc_header)+1 locate .startup at (top of .keypadc)+1 locate .cleanup at (top of .startup)+1 locate .exit at (top of .cleanup)+1 locate code at (top of .exit)+1 locate data at (top of code)+1 locate text at (top of data)+1 bin/TICTAC2P.hex = obj\main.obj,obj\blue_firework_1_16x16.obj,obj\blue_firework_2_16x16.obj,obj\blue_swirl.obj,obj\bluecursor.obj,obj\fancyblueo.obj,obj\fancyredx.obj,obj\red_firework_1_16x16.obj,obj\red_firework_2_16x16.obj,obj\red_swirl.obj,obj\redcursor.obj,obj\tictacgfx.obj,obj\iconc.obj,C:\Users\Pieman773\Desktop\CECdev\lib\ccleanup.obj,C:\Users\Pieman773\Desktop\CECdev\lib\cce.lib,C:\Users\Pieman773\Desktop\CECdev\lib\cshared.lib,C:\Users\Pieman773\Desktop\CECdev\lib\clinked.lib,C:\Users\Pieman773\Desktop\CECdev\lib\graphx.lib,C:\Users\Pieman773\Desktop\CECdev\lib\keypadc.lib,C:\Users\Pieman773\Desktop\CECdev\lib\graphx_header.obj,C:\Users\Pieman773\Desktop\CECdev\lib\keypadc_header.obj,C:\Users\Pieman773\Desktop\CECdev\lib\libheader.obj,C:\Users\Pieman773\Desktop\CECdev\lib\cstartup.obj 
+
+SPACE ALLOCATION:
+=================
+
+Space                     Base         Top      Size      Used    Unused
+------------------ ----------- ----------- --------- --------- ---------
+RAM                   D:D031F6    D:D1E6FD   300000H     3E9AH   2FC166H
+                                          (  3145728     16026   3129702)
+
+
+SEGMENTS WITHIN SPACE:
+======================
+
+RAM                Type                Base        Top         Size
+------------------ ------------------- ----------- ----------- ---------
+.cleanup           normal data            D:D1AA78    D:D1AA8B       14h
+.exit              normal data            D:D1AA8C    D:D1AA93        8h
+.graphx            normal data            D:D1A9EF    D:D1AA2A       3ch
+.graphx_header     normal data            D:D1A9E6    D:D1A9EE        9h
+.header            normal data            D:D1A87F    D:D1A881        3h
+.icon              normal data            D:D1A882    D:D1A995      114h
+.keypadc           normal data            D:D1AA35    D:D1AA3C        8h
+.keypadc_header    normal data            D:D1AA2B    D:D1AA34        ah
+.launcher          normal data            D:D1A996    D:D1A9E5       50h
+.startup           normal data            D:D1AA3D    D:D1AA77       3bh
+BSS                normal data            D:D031F6    D:D03210       1bh
+CODE               normal data            D:D1AA94    D:D1B751      cbeh
+DATA               normal data            D:D1B752    D:D1E638     2ee7h
+TEXT               normal data            D:D1E639    D:D1E6FD       c5h
+
+SEGMENTS WITHIN MODULES:
+========================
+
+Module: ..\..\..\..\..\PIEMAN~1\DESKTOP\CECDEV\TICTAC~1\SRC\GFX\BLUE_FIREWORK_1_16X16.C (File: blue_firework_1_16x16.obj) Version: 1:0 03/31/2019 12:05:36
+
+    Name                                        Base        Top      Size
+    --------------------------------------- ----------- ----------- ---------
+    Segment: DATA                              D:D1B7A9    D:D1B8AA      102h
+
+
+Module: ..\..\..\..\..\PIEMAN~1\DESKTOP\CECDEV\TICTAC~1\SRC\GFX\BLUE_FIREWORK_2_16X16.C (File: blue_firework_2_16x16.obj) Version: 1:0 03/31/2019 12:05:36
+
+    Name                                        Base        Top      Size
+    --------------------------------------- ----------- ----------- ---------
+    Segment: DATA                              D:D1B8AB    D:D1B9AC      102h
+
+
+Module: ..\..\..\..\..\PIEMAN~1\DESKTOP\CECDEV\TICTAC~1\SRC\GFX\BLUE_SWIRL.C (File: blue_swirl.obj) Version: 1:0 03/31/2019 12:05:36
+
+    Name                                        Base        Top      Size
+    --------------------------------------- ----------- ----------- ---------
+    Segment: DATA                              D:D1B9AD    D:D1BAAE      102h
+
+
+Module: ..\..\..\..\..\PIEMAN~1\DESKTOP\CECDEV\TICTAC~1\SRC\GFX\BLUECURSOR.C (File: bluecursor.obj) Version: 1:0 03/31/2019 12:05:36
+
+    Name                                        Base        Top      Size
+    --------------------------------------- ----------- ----------- ---------
+    Segment: DATA                              D:D1BAAF    D:D1C411      963h
+
+
+Module: ..\..\..\..\..\PIEMAN~1\DESKTOP\CECDEV\TICTAC~1\SRC\GFX\FANCYBLUEO.C (File: fancyblueo.obj) Version: 1:0 03/31/2019 12:05:36
+
+    Name                                        Base        Top      Size
+    --------------------------------------- ----------- ----------- ---------
+    Segment: DATA                              D:D1C412    D:D1CDD7      9c6h
+
+
+Module: ..\..\..\..\..\PIEMAN~1\DESKTOP\CECDEV\TICTAC~1\SRC\GFX\FANCYREDX.C (File: fancyredx.obj) Version: 1:0 03/31/2019 12:05:37
+
+    Name                                        Base        Top      Size
+    --------------------------------------- ----------- ----------- ---------
+    Segment: DATA                              D:D1CDD8    D:D1D79D      9c6h
+
+
+Module: ..\..\..\..\..\PIEMAN~1\DESKTOP\CECDEV\TICTAC~1\SRC\GFX\RED_FIREWORK_1_16X16.C (File: red_firework_1_16x16.obj) Version: 1:0 03/31/2019 12:05:37
+
+    Name                                        Base        Top      Size
+    --------------------------------------- ----------- ----------- ---------
+    Segment: DATA                              D:D1D79E    D:D1D89F      102h
+
+
+Module: ..\..\..\..\..\PIEMAN~1\DESKTOP\CECDEV\TICTAC~1\SRC\GFX\RED_FIREWORK_2_16X16.C (File: red_firework_2_16x16.obj) Version: 1:0 03/31/2019 12:05:37
+
+    Name                                        Base        Top      Size
+    --------------------------------------- ----------- ----------- ---------
+    Segment: DATA                              D:D1D8A0    D:D1D9A1      102h
+
+
+Module: ..\..\..\..\..\PIEMAN~1\DESKTOP\CECDEV\TICTAC~1\SRC\GFX\RED_SWIRL.C (File: red_swirl.obj) Version: 1:0 03/31/2019 12:05:37
+
+    Name                                        Base        Top      Size
+    --------------------------------------- ----------- ----------- ---------
+    Segment: DATA                              D:D1D9A2    D:D1DAA3      102h
+
+
+Module: ..\..\..\..\..\PIEMAN~1\DESKTOP\CECDEV\TICTAC~1\SRC\GFX\REDCURSOR.C (File: redcursor.obj) Version: 1:0 03/31/2019 12:05:37
+
+    Name                                        Base        Top      Size
+    --------------------------------------- ----------- ----------- ---------
+    Segment: DATA                              D:D1DAA4    D:D1E406      963h
+
+
+Module: ..\..\..\..\..\PIEMAN~1\DESKTOP\CECDEV\TICTAC~1\SRC\GFX\TICTACGFX.C (File: tictacgfx.obj) Version: 1:0 03/31/2019 12:05:37
+
+    Name                                        Base        Top      Size
+    --------------------------------------- ----------- ----------- ---------
+    Segment: DATA                              D:D1E407    D:D1E606      200h
+
+
+Module: ..\..\..\..\..\PIEMAN~1\DESKTOP\CECDEV\TICTAC~1\SRC\MAIN.C (File: main.obj) Version: 1:0 03/31/2019 12:05:35
+
+    Name                                        Base        Top      Size
+    --------------------------------------- ----------- ----------- ---------
+    Segment: BSS                               D:D031F6    D:D03210       1bh
+    Segment: CODE                              D:D1AA94    D:D1B6EC      c59h
+    Segment: DATA                              D:D1B752    D:D1B7A8       57h
+    Segment: TEXT (was STRSECT)                D:D1E639    D:D1E6FD       c5h
+
+
+Module: ccleanup.asm (File: ccleanup.obj) Version: 1:0 07/24/2017 21:53:14
+
+    Name                                        Base        Top      Size
+    --------------------------------------- ----------- ----------- ---------
+    Segment: .cleanup                          D:D1AA78    D:D1AA8B       14h
+
+
+Module: cstartup.asm (File: cstartup.obj) Version: 1:0 07/24/2017 21:53:14
+
+    Name                                        Base        Top      Size
+    --------------------------------------- ----------- ----------- ---------
+    Segment: .exit                             D:D1AA8C    D:D1AA93        8h
+    Segment: .header                           D:D1A87F    D:D1A881        3h
+    Segment: .startup                          D:D1AA3D    D:D1AA77       3bh
+
+
+Module: frameset.src (Library: cshared.lib) Version: 1:0 07/24/2017 21:51:33
+
+    Name                                        Base        Top      Size
+    --------------------------------------- ----------- ----------- ---------
+    Segment: CODE                              D:D1B744    D:D1B751        eh
+
+
+Module: gfx_Begin.src (Library: graphx.lib) Version: 1:0 07/24/2017 21:49:27
+
+    Name                                        Base        Top      Size
+    --------------------------------------- ----------- ----------- ---------
+    Segment: .graphx                           D:D1AA07    D:D1AA0A        4h
+
+
+Module: gfx_End.src (Library: graphx.lib) Version: 1:0 07/24/2017 21:49:31
+
+    Name                                        Base        Top      Size
+    --------------------------------------- ----------- ----------- ---------
+    Segment: .graphx                           D:D1AA1F    D:D1AA22        4h
+
+
+Module: gfx_FillScreen.src (Library: graphx.lib) Version: 1:0 07/24/2017 21:49:34
+
+    Name                                        Base        Top      Size
+    --------------------------------------- ----------- ----------- ---------
+    Segment: .graphx                           D:D1A9FF    D:D1AA02        4h
+
+
+Module: gfx_GetPixel.src (Library: graphx.lib) Version: 1:0 07/24/2017 21:49:38
+
+    Name                                        Base        Top      Size
+    --------------------------------------- ----------- ----------- ---------
+    Segment: .graphx                           D:D1AA03    D:D1AA06        4h
+
+
+Module: gfx_Line.src (Library: graphx.lib) Version: 1:0 07/24/2017 21:49:42
+
+    Name                                        Base        Top      Size
+    --------------------------------------- ----------- ----------- ---------
+    Segment: .graphx                           D:D1A9FB    D:D1A9FE        4h
+
+
+Module: gfx_PrintStringXY.src (Library: graphx.lib) Version: 1:0 07/24/2017 21:49:45
+
+    Name                                        Base        Top      Size
+    --------------------------------------- ----------- ----------- ---------
+    Segment: .graphx                           D:D1A9F7    D:D1A9FA        4h
+
+
+Module: gfx_Rectangle.src (Library: graphx.lib) Version: 1:0 07/24/2017 21:49:48
+
+    Name                                        Base        Top      Size
+    --------------------------------------- ----------- ----------- ---------
+    Segment: .graphx                           D:D1A9F3    D:D1A9F6        4h
+
+
+Module: gfx_ScaledTransparentSprite_NoClip.src (Library: graphx.lib) Version: 1:0 07/24/2017 21:49:53
+
+    Name                                        Base        Top      Size
+    --------------------------------------- ----------- ----------- ---------
+    Segment: .graphx                           D:D1AA27    D:D1AA2A        4h
+
+
+Module: gfx_SetColor.src (Library: graphx.lib) Version: 1:0 07/24/2017 21:49:54
+
+    Name                                        Base        Top      Size
+    --------------------------------------- ----------- ----------- ---------
+    Segment: .graphx                           D:D1AA0F    D:D1AA12        4h
+
+
+Module: gfx_SetPalette.src (Library: graphx.lib) Version: 1:0 07/24/2017 21:49:55
+
+    Name                                        Base        Top      Size
+    --------------------------------------- ----------- ----------- ---------
+    Segment: .graphx                           D:D1AA17    D:D1AA1A        4h
+
+
+Module: gfx_SetTextBGColor.src (Library: graphx.lib) Version: 1:0 07/24/2017 21:49:56
+
+    Name                                        Base        Top      Size
+    --------------------------------------- ----------- ----------- ---------
+    Segment: .graphx                           D:D1AA23    D:D1AA26        4h
+
+
+Module: gfx_SetTextFGColor.src (Library: graphx.lib) Version: 1:0 07/24/2017 21:49:57
+
+    Name                                        Base        Top      Size
+    --------------------------------------- ----------- ----------- ---------
+    Segment: .graphx                           D:D1A9EF    D:D1A9F2        4h
+
+
+Module: gfx_SetTextScale.src (Library: graphx.lib) Version: 1:0 07/24/2017 21:49:58
+
+    Name                                        Base        Top      Size
+    --------------------------------------- ----------- ----------- ---------
+    Segment: .graphx                           D:D1AA13    D:D1AA16        4h
+
+
+Module: gfx_SetTransparentColor.src (Library: graphx.lib) Version: 1:0 07/24/2017 21:49:59
+
+    Name                                        Base        Top      Size
+    --------------------------------------- ----------- ----------- ---------
+    Segment: .graphx                           D:D1AA0B    D:D1AA0E        4h
+
+
+Module: gfx_TransparentSprite.src (Library: graphx.lib) Version: 1:0 07/24/2017 21:50:07
+
+    Name                                        Base        Top      Size
+    --------------------------------------- ----------- ----------- ---------
+    Segment: .graphx                           D:D1AA1B    D:D1AA1E        4h
+
+
+Module: graphx_header.asm (File: graphx_header.obj) Version: 1:0 07/24/2017 21:50:14
+
+    Name                                        Base        Top      Size
+    --------------------------------------- ----------- ----------- ---------
+    Segment: .graphx_header                    D:D1A9E6    D:D1A9EE        9h
+
+
+Module: iconc.src (File: iconc.obj) Version: 1:0 03/31/2019 12:05:37
+
+    Name                                        Base        Top      Size
+    --------------------------------------- ----------- ----------- ---------
+    Segment: .icon                             D:D1A882    D:D1A995      114h
+
+
+Module: kb_AnyKey.src (Library: keypadc.lib) Version: 1:0 07/24/2017 21:50:33
+
+    Name                                        Base        Top      Size
+    --------------------------------------- ----------- ----------- ---------
+    Segment: .keypadc                          D:D1AA35    D:D1AA38        4h
+
+
+Module: kb_Scan.src (Library: keypadc.lib) Version: 1:0 07/24/2017 21:50:35
+
+    Name                                        Base        Top      Size
+    --------------------------------------- ----------- ----------- ---------
+    Segment: .keypadc                          D:D1AA39    D:D1AA3C        4h
+
+
+Module: keypadc_header.asm (File: keypadc_header.obj) Version: 1:0 07/24/2017 21:50:36
+
+    Name                                        Base        Top      Size
+    --------------------------------------- ----------- ----------- ---------
+    Segment: .keypadc_header                   D:D1AA2B    D:D1AA34        ah
+
+
+Module: libheader.asm (File: libheader.obj) Version: 1:0 07/24/2017 21:53:15
+
+    Name                                        Base        Top      Size
+    --------------------------------------- ----------- ----------- ---------
+    Segment: .launcher                         D:D1A996    D:D1A9E5       50h
+    Segment: DATA                              D:D1E607    D:D1E628       22h
+
+
+Module: random.src (Library: cce.lib) Version: 1:0 07/24/2017 21:50:39
+
+    Name                                        Base        Top      Size
+    --------------------------------------- ----------- ----------- ---------
+    Segment: CODE                              D:D1B6ED    D:D1B743       57h
+    Segment: DATA                              D:D1E629    D:D1E638       10h
+
+EXTERNAL DEFINITIONS:
+=====================
+
+Symbol                             Address   Module          Segment
+-------------------------------- ----------- --------------- --------------------------------
+__copy_code_to_ram                  00000000 (User Defined)
+__len_bss                           0000001B (User Defined)
+__low_bss                           00D031F6 (User Defined)
+__heapbot                           00D03211 (User Defined)
+__heaptop                           00D13FD6 (User Defined)
+__stack                             00D1A87E (User Defined)
+_longjmp                            D:000098 longjmp         CODE                            
+_setjmp                             D:0000B8 setjmp          CODE                            
+__iremu                             D:000170 iremu           CODE                            
+_errno                              D:D008DC cstartup        CODE                            
+_previous_cursorx                   D:D031F6 MAIN            BSS                             
+_previous_cursory                   D:D031F9 MAIN            BSS                             
+_effectx                            D:D031FC MAIN            BSS                             
+_effecty                            D:D031FF MAIN            BSS                             
+_value                              D:D03202 MAIN            BSS                             
+_init                               D:D1A882 cstartup        .header                         
+__program_icon                      D:D1A887 iconc           .icon                           
+__program_description               D:D1A989 iconc           .icon                           
+_gfx_SetTextFGColor                 D:D1A9EF gfx_SetTextFGCo .graphx                         
+_gfx_Rectangle                      D:D1A9F3 gfx_Rectangle   .graphx                         
+_gfx_PrintStringXY                  D:D1A9F7 gfx_PrintString .graphx                         
+_gfx_Line                           D:D1A9FB gfx_Line        .graphx                         
+_gfx_FillScreen                     D:D1A9FF gfx_FillScreen  .graphx                         
+_gfx_GetPixel                       D:D1AA03 gfx_GetPixel    .graphx                         
+_gfx_Begin                          D:D1AA07 gfx_Begin       .graphx                         
+_gfx_SetTransparentColor            D:D1AA0B gfx_SetTranspar .graphx                         
+_gfx_SetColor                       D:D1AA0F gfx_SetColor    .graphx                         
+_gfx_SetTextScale                   D:D1AA13 gfx_SetTextScal .graphx                         
+_gfx_SetPalette                     D:D1AA17 gfx_SetPalette  .graphx                         
+_gfx_TransparentSprite              D:D1AA1B gfx_Transparent .graphx                         
+_gfx_End                            D:D1AA1F gfx_End         .graphx                         
+_gfx_SetTextBGColor                 D:D1AA23 gfx_SetTextBGCo .graphx                         
+_gfx_ScaledTransparentSprite_NoC    D:D1AA27 gfx_ScaledTrans .graphx                         
+_kb_AnyKey                          D:D1AA35 kb_AnyKey       .keypadc                        
+_kb_Scan                            D:D1AA39 kb_Scan         .keypadc                        
+__exit                              D:D1AA6A cstartup        .startup                        
+__errsp                             D:D1AA6A cstartup        .startup                        
+_exit                               D:D1AA8E cstartup        .exit                           
+_main                               D:D1AA94 MAIN            CODE                            
+_keywait                            D:D1B37A MAIN            CODE                            
+_resetvars                          D:D1B382 MAIN            CODE                            
+_winscreen                          D:D1B453 MAIN            CODE                            
+_random                             D:D1B6ED random          CODE                            
+__frameset                          D:D1B744 frameset        CODE                            
+_xx                                 D:D1B752 MAIN            DATA                            
+_xy                                 D:D1B755 MAIN            DATA                            
+_ox                                 D:D1B758 MAIN            DATA                            
+_oy                                 D:D1B75B MAIN            DATA                            
+_cursorx                            D:D1B75E MAIN            DATA                            
+_cursory                            D:D1B761 MAIN            DATA                            
+_cursor_step                        D:D1B764 MAIN            DATA                            
+_player                             D:D1B767 MAIN            DATA                            
+_element                            D:D1B76A MAIN            DATA                            
+_test_element                       D:D1B76D MAIN            DATA                            
+_test_result                        D:D1B770 MAIN            DATA                            
+_clear                              D:D1B773 MAIN            DATA                            
+_version                            D:D1B776 MAIN            DATA                            
+_winner                             D:D1B779 MAIN            DATA                            
+_xwins                              D:D1B77C MAIN            DATA                            
+_owins                              D:D1B77F MAIN            DATA                            
+_catsgame                           D:D1B782 MAIN            DATA                            
+_board                              D:D1B785 MAIN            DATA                            
+_coord                              D:D1B78E MAIN            DATA                            
+_blue_firework_1_16x16_data         D:D1B7A9 BLUE_FIREWORK_1 DATA                            
+_blue_firework_2_16x16_data         D:D1B8AB BLUE_FIREWORK_2 DATA                            
+_blue_swirl_data                    D:D1B9AD BLUE_SWIRL      DATA                            
+_bluecursor_data                    D:D1BAAF BLUECURSOR      DATA                            
+_fancyblueo_data                    D:D1C412 FANCYBLUEO      DATA                            
+_fancyredx_data                     D:D1CDD8 FANCYREDX       DATA                            
+_red_firework_1_16x16_data          D:D1D79E RED_FIREWORK_1_ DATA                            
+_red_firework_2_16x16_data          D:D1D8A0 RED_FIREWORK_2_ DATA                            
+_red_swirl_data                     D:D1D9A2 RED_SWIRL       DATA                            
+_redcursor_data                     D:D1DAA4 REDCURSOR       DATA                            
+_tictacgfx_pal                      D:D1E407 TICTACGFX       DATA                            
+__state                             D:D1E629 random          DATA                            
+
+75 external symbol(s).
+
+SYMBOL CROSS REFERENCE:
+=======================
+Name                              Use         Module
+--------------------------------- ----------- -------------------------
+__copy_code_to_ram                Defined     LINKER
+__len_bss                         Defined     LINKER
+                                  Referenced  cstartup.asm
+__low_bss                         Defined     LINKER
+                                  Referenced  cstartup.asm
+__heapbot                         Defined     LINKER
+__heaptop                         Defined     LINKER
+__stack                           Defined     LINKER
+_longjmp                          Defined     longjmp.src
+                                  Referenced  ..\..\..\..\..\PIEMAN~1\DESKTOP\CECDEV\TICTAC~1\SRC\MAIN.C
+_setjmp                           Defined     setjmp.src
+                                  Referenced  ..\..\..\..\..\PIEMAN~1\DESKTOP\CECDEV\TICTAC~1\SRC\MAIN.C
+__iremu                           Defined     iremu.src
+                                  Referenced  ..\..\..\..\..\PIEMAN~1\DESKTOP\CECDEV\TICTAC~1\SRC\MAIN.C
+_errno                            Defined     cstartup.asm
+_previous_cursorx                 Defined     ..\..\..\..\..\PIEMAN~1\DESKTOP\CECDEV\TICTAC~1\SRC\MAIN.C
+_previous_cursory                 Defined     ..\..\..\..\..\PIEMAN~1\DESKTOP\CECDEV\TICTAC~1\SRC\MAIN.C
+_effectx                          Defined     ..\..\..\..\..\PIEMAN~1\DESKTOP\CECDEV\TICTAC~1\SRC\MAIN.C
+_effecty                          Defined     ..\..\..\..\..\PIEMAN~1\DESKTOP\CECDEV\TICTAC~1\SRC\MAIN.C
+_value                            Defined     ..\..\..\..\..\PIEMAN~1\DESKTOP\CECDEV\TICTAC~1\SRC\MAIN.C
+_init                             Defined     cstartup.asm
+__program_icon                    Defined     iconc.src
+__program_description             Defined     iconc.src
+_gfx_SetTextFGColor               Defined     gfx_SetTextFGColor.src
+                                  Referenced  ..\..\..\..\..\PIEMAN~1\DESKTOP\CECDEV\TICTAC~1\SRC\MAIN.C
+_gfx_Rectangle                    Defined     gfx_Rectangle.src
+                                  Referenced  ..\..\..\..\..\PIEMAN~1\DESKTOP\CECDEV\TICTAC~1\SRC\MAIN.C
+_gfx_PrintStringXY                Defined     gfx_PrintStringXY.src
+                                  Referenced  ..\..\..\..\..\PIEMAN~1\DESKTOP\CECDEV\TICTAC~1\SRC\MAIN.C
+_gfx_Line                         Defined     gfx_Line.src
+                                  Referenced  ..\..\..\..\..\PIEMAN~1\DESKTOP\CECDEV\TICTAC~1\SRC\MAIN.C
+_gfx_FillScreen                   Defined     gfx_FillScreen.src
+                                  Referenced  ..\..\..\..\..\PIEMAN~1\DESKTOP\CECDEV\TICTAC~1\SRC\MAIN.C
+_gfx_GetPixel                     Defined     gfx_GetPixel.src
+                                  Referenced  ..\..\..\..\..\PIEMAN~1\DESKTOP\CECDEV\TICTAC~1\SRC\MAIN.C
+_gfx_Begin                        Defined     gfx_Begin.src
+                                  Referenced  ..\..\..\..\..\PIEMAN~1\DESKTOP\CECDEV\TICTAC~1\SRC\MAIN.C
+_gfx_SetTransparentColor          Defined     gfx_SetTransparentColor.src
+                                  Referenced  ..\..\..\..\..\PIEMAN~1\DESKTOP\CECDEV\TICTAC~1\SRC\MAIN.C
+_gfx_SetColor                     Defined     gfx_SetColor.src
+                                  Referenced  ..\..\..\..\..\PIEMAN~1\DESKTOP\CECDEV\TICTAC~1\SRC\MAIN.C
+_gfx_SetTextScale                 Defined     gfx_SetTextScale.src
+                                  Referenced  ..\..\..\..\..\PIEMAN~1\DESKTOP\CECDEV\TICTAC~1\SRC\MAIN.C
+_gfx_SetPalette                   Defined     gfx_SetPalette.src
+                                  Referenced  ..\..\..\..\..\PIEMAN~1\DESKTOP\CECDEV\TICTAC~1\SRC\MAIN.C
+_gfx_TransparentSprite            Defined     gfx_TransparentSprite.src
+                                  Referenced  ..\..\..\..\..\PIEMAN~1\DESKTOP\CECDEV\TICTAC~1\SRC\MAIN.C
+_gfx_End                          Defined     gfx_End.src
+                                  Referenced  ..\..\..\..\..\PIEMAN~1\DESKTOP\CECDEV\TICTAC~1\SRC\MAIN.C
+_gfx_SetTextBGColor               Defined     gfx_SetTextBGColor.src
+                                  Referenced  ..\..\..\..\..\PIEMAN~1\DESKTOP\CECDEV\TICTAC~1\SRC\MAIN.C
+_gfx_ScaledTransparentSprite_NoCl Defined     gfx_ScaledTransparentSprite_NoClip.src
+                                  Referenced  ..\..\..\..\..\PIEMAN~1\DESKTOP\CECDEV\TICTAC~1\SRC\MAIN.C
+_kb_AnyKey                        Defined     kb_AnyKey.src
+                                  Referenced  ..\..\..\..\..\PIEMAN~1\DESKTOP\CECDEV\TICTAC~1\SRC\MAIN.C
+_kb_Scan                          Defined     kb_Scan.src
+                                  Referenced  ..\..\..\..\..\PIEMAN~1\DESKTOP\CECDEV\TICTAC~1\SRC\MAIN.C
+__exit                            Defined     cstartup.asm
+__errsp                           Defined     cstartup.asm
+_exit                             Defined     cstartup.asm
+_main                             Defined     ..\..\..\..\..\PIEMAN~1\DESKTOP\CECDEV\TICTAC~1\SRC\MAIN.C
+                                  Referenced  cstartup.asm
+_keywait                          Defined     ..\..\..\..\..\PIEMAN~1\DESKTOP\CECDEV\TICTAC~1\SRC\MAIN.C
+_resetvars                        Defined     ..\..\..\..\..\PIEMAN~1\DESKTOP\CECDEV\TICTAC~1\SRC\MAIN.C
+_winscreen                        Defined     ..\..\..\..\..\PIEMAN~1\DESKTOP\CECDEV\TICTAC~1\SRC\MAIN.C
+_random                           Defined     random.src
+                                  Referenced  ..\..\..\..\..\PIEMAN~1\DESKTOP\CECDEV\TICTAC~1\SRC\MAIN.C
+__frameset                        Defined     frameset.src
+                                  Referenced  ..\..\..\..\..\PIEMAN~1\DESKTOP\CECDEV\TICTAC~1\SRC\MAIN.C
+_xx                               Defined     ..\..\..\..\..\PIEMAN~1\DESKTOP\CECDEV\TICTAC~1\SRC\MAIN.C
+_xy                               Defined     ..\..\..\..\..\PIEMAN~1\DESKTOP\CECDEV\TICTAC~1\SRC\MAIN.C
+_ox                               Defined     ..\..\..\..\..\PIEMAN~1\DESKTOP\CECDEV\TICTAC~1\SRC\MAIN.C
+_oy                               Defined     ..\..\..\..\..\PIEMAN~1\DESKTOP\CECDEV\TICTAC~1\SRC\MAIN.C
+_cursorx                          Defined     ..\..\..\..\..\PIEMAN~1\DESKTOP\CECDEV\TICTAC~1\SRC\MAIN.C
+_cursory                          Defined     ..\..\..\..\..\PIEMAN~1\DESKTOP\CECDEV\TICTAC~1\SRC\MAIN.C
+_cursor_step                      Defined     ..\..\..\..\..\PIEMAN~1\DESKTOP\CECDEV\TICTAC~1\SRC\MAIN.C
+_player                           Defined     ..\..\..\..\..\PIEMAN~1\DESKTOP\CECDEV\TICTAC~1\SRC\MAIN.C
+_element                          Defined     ..\..\..\..\..\PIEMAN~1\DESKTOP\CECDEV\TICTAC~1\SRC\MAIN.C
+_test_element                     Defined     ..\..\..\..\..\PIEMAN~1\DESKTOP\CECDEV\TICTAC~1\SRC\MAIN.C
+_test_result                      Defined     ..\..\..\..\..\PIEMAN~1\DESKTOP\CECDEV\TICTAC~1\SRC\MAIN.C
+_clear                            Defined     ..\..\..\..\..\PIEMAN~1\DESKTOP\CECDEV\TICTAC~1\SRC\MAIN.C
+_version                          Defined     ..\..\..\..\..\PIEMAN~1\DESKTOP\CECDEV\TICTAC~1\SRC\MAIN.C
+_winner                           Defined     ..\..\..\..\..\PIEMAN~1\DESKTOP\CECDEV\TICTAC~1\SRC\MAIN.C
+_xwins                            Defined     ..\..\..\..\..\PIEMAN~1\DESKTOP\CECDEV\TICTAC~1\SRC\MAIN.C
+_owins                            Defined     ..\..\..\..\..\PIEMAN~1\DESKTOP\CECDEV\TICTAC~1\SRC\MAIN.C
+_catsgame                         Defined     ..\..\..\..\..\PIEMAN~1\DESKTOP\CECDEV\TICTAC~1\SRC\MAIN.C
+_board                            Defined     ..\..\..\..\..\PIEMAN~1\DESKTOP\CECDEV\TICTAC~1\SRC\MAIN.C
+_coord                            Defined     ..\..\..\..\..\PIEMAN~1\DESKTOP\CECDEV\TICTAC~1\SRC\MAIN.C
+_blue_firework_1_16x16_data       Defined     ..\..\..\..\..\PIEMAN~1\DESKTOP\CECDEV\TICTAC~1\SRC\GFX\BLUE_FIREWORK_1_16X16.C
+                                  Referenced  ..\..\..\..\..\PIEMAN~1\DESKTOP\CECDEV\TICTAC~1\SRC\MAIN.C
+_blue_firework_2_16x16_data       Defined     ..\..\..\..\..\PIEMAN~1\DESKTOP\CECDEV\TICTAC~1\SRC\GFX\BLUE_FIREWORK_2_16X16.C
+                                  Referenced  ..\..\..\..\..\PIEMAN~1\DESKTOP\CECDEV\TICTAC~1\SRC\MAIN.C
+_blue_swirl_data                  Defined     ..\..\..\..\..\PIEMAN~1\DESKTOP\CECDEV\TICTAC~1\SRC\GFX\BLUE_SWIRL.C
+                                  Referenced  ..\..\..\..\..\PIEMAN~1\DESKTOP\CECDEV\TICTAC~1\SRC\MAIN.C
+_bluecursor_data                  Defined     ..\..\..\..\..\PIEMAN~1\DESKTOP\CECDEV\TICTAC~1\SRC\GFX\BLUECURSOR.C
+                                  Referenced  ..\..\..\..\..\PIEMAN~1\DESKTOP\CECDEV\TICTAC~1\SRC\MAIN.C
+_fancyblueo_data                  Defined     ..\..\..\..\..\PIEMAN~1\DESKTOP\CECDEV\TICTAC~1\SRC\GFX\FANCYBLUEO.C
+                                  Referenced  ..\..\..\..\..\PIEMAN~1\DESKTOP\CECDEV\TICTAC~1\SRC\MAIN.C
+_fancyredx_data                   Defined     ..\..\..\..\..\PIEMAN~1\DESKTOP\CECDEV\TICTAC~1\SRC\GFX\FANCYREDX.C
+                                  Referenced  ..\..\..\..\..\PIEMAN~1\DESKTOP\CECDEV\TICTAC~1\SRC\MAIN.C
+_red_firework_1_16x16_data        Defined     ..\..\..\..\..\PIEMAN~1\DESKTOP\CECDEV\TICTAC~1\SRC\GFX\RED_FIREWORK_1_16X16.C
+                                  Referenced  ..\..\..\..\..\PIEMAN~1\DESKTOP\CECDEV\TICTAC~1\SRC\MAIN.C
+_red_firework_2_16x16_data        Defined     ..\..\..\..\..\PIEMAN~1\DESKTOP\CECDEV\TICTAC~1\SRC\GFX\RED_FIREWORK_2_16X16.C
+                                  Referenced  ..\..\..\..\..\PIEMAN~1\DESKTOP\CECDEV\TICTAC~1\SRC\MAIN.C
+_red_swirl_data                   Defined     ..\..\..\..\..\PIEMAN~1\DESKTOP\CECDEV\TICTAC~1\SRC\GFX\RED_SWIRL.C
+                                  Referenced  ..\..\..\..\..\PIEMAN~1\DESKTOP\CECDEV\TICTAC~1\SRC\MAIN.C
+_redcursor_data                   Defined     ..\..\..\..\..\PIEMAN~1\DESKTOP\CECDEV\TICTAC~1\SRC\GFX\REDCURSOR.C
+                                  Referenced  ..\..\..\..\..\PIEMAN~1\DESKTOP\CECDEV\TICTAC~1\SRC\MAIN.C
+_tictacgfx_pal                    Defined     ..\..\..\..\..\PIEMAN~1\DESKTOP\CECDEV\TICTAC~1\SRC\GFX\TICTACGFX.C
+                                  Referenced  ..\..\..\..\..\PIEMAN~1\DESKTOP\CECDEV\TICTAC~1\SRC\MAIN.C
+__state                           Defined     random.src
+
+OUTPUT CHECKSUM
+===============
+bin/TICTAC2P.hex     2F9613
+
+
+
+END OF LINK MAP:
+================
+0 Errors
+0 Warnings
